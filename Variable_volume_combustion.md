@@ -7,8 +7,8 @@ import math
 
 # Symulation of combusting a fuel and air mixture in variable volume(piston engine) with spontaneous ignition
 
-# Three kinds of fuel can be examined - methane, propane, butane
-fuel = input("Enter a type of fuel (CH4/C3H8/C4H10):")
+# Three kinds of fuel can be examined - methane, ethane, propane
+fuel = input("Enter a type of fuel (CH4/C2H6/C3H8):")
 fuel = fuel.lower()
 
 
@@ -21,8 +21,8 @@ if fuel == 'ch4':
 elif fuel == 'c3h8':
     fuel_air.X = 'C3H8:1.0, O2:5.0, N2:18.8'
     c = True
-elif fuel == 'c4h10':
-    fuel_air.X = 'C4H10:1.0, O2:6.5, N2:24.44'
+elif fuel == 'c2h6':
+    fuel_air.X = 'C2H6:1.0, O2:3.5, N2:13.16'
     c = True
 else:
     print ("You entered a wrong type of fuel")
