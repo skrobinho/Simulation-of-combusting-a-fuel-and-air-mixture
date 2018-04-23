@@ -61,16 +61,20 @@ if c == True:
     time = []
     temperature = []
     pressure = []
+    combustor_volume = []
     
-    for n in range(60):
+    print ("%s\t %s\t %s\t %s" %('Time', 'Temperature', 'Pressure', 'Combustor volume'))
+    
+    for n in range(100):
         t = (n+1)*y
         simulation.advance(t)
         time.append(t)
         temperature.append(fuel_air.T)
         pressure.append(fuel_air.P)
-        print ("%f\t %f\t %f" %(t, fuel_air.T, fuel_air.P))
+        combustor_volume.append(combustor.volume)
+        print ("%f\t %f\t %f\t %f" %(t, fuel_air.T, fuel_air.P, combustor.volume))
         
-    physical_quantities = {'Temperature': temperature, 'Pressure': pressure }
+    physical_quantities = {'Temperature': temperature, 'Pressure': pressure, 'Combustor volume': combustor_volume }
 
     for n in physical_quantities:
         plt.plot(time, physical_quantities[n])
@@ -80,11 +84,12 @@ if c == True:
         plt.savefig('{} graph.png'.format(n))
         plt.close()
         
-    time1 = 100000.
+    time1 = 10000.
     simulation.advance(time1)
 
 # Condition if spontaneous ignition has happend     
     if combustor.T < 2000.:        
-        print ("Samozapłon nie nastąpił")
+        print ("Auto-ignition has not occured")
     else:
-        print ("Samozapłon nastąpił")
+        print ("Auto-ignition has occured")
+     
