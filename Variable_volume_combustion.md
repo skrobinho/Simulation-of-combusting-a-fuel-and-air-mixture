@@ -63,10 +63,10 @@ if c == True:
     pressure = []
     combustor_volume = []
     
-    print ("%s\t %s\t %s\t %s" %('Time', 'Temperature', 'Pressure', 'Combustor volume'))
+    print ("%s\t\t %s\t %s\t %s" %('Time', 'Temperature', 'Pressure', 'Combustor volume'))
     
-    for n in range(100):
-        t = (n+1)*y
+    for n in range(101):
+        t = (n)*y
         simulation.advance(t)
         time.append(t)
         temperature.append(fuel_air.T)
@@ -81,15 +81,14 @@ if c == True:
         plt.xlabel('time')
         plt.ylabel(n)
         plt.title("{}(time)".format(n))
-        plt.savefig('{} graph.png'.format(n))
+        plt.savefig('{} graph - {}, {}K.png'.format(n, fuel.upper(), int(x)))
         plt.close()
         
-    time1 = 10000.
-    simulation.advance(time1)
+   # time1 = 100000.
+    #simulation.advance(time1)
 
 # Condition if spontaneous ignition has happend     
     if combustor.T < 2000.:        
         print ("Auto-ignition has not occured")
     else:
         print ("Auto-ignition has occured")
-     
