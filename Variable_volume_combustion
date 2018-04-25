@@ -79,7 +79,7 @@ if c == True:
         plt.xlabel('time')
         plt.ylabel(n)
         plt.title("{}(time)".format(n))
-        plt.savefig('{} graph - {} {}K.png'.format(n, fuel.upper(), int(x)))
+        plt.savefig('{}/{}K/{} graph - {}, {}K.png'.format(fuel.upper(), int(x), n, fuel.upper(), int(x)))
         plt.close()
         
    # time1 = 100000.
