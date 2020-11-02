@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-# Symulation of combusting a fuel and air mixture in variable volume(piston engine) with spontaneous ignition
+# Simulation of combusting a fuel and air mixture in variable volume(piston engine) with spontaneous ignition
 
 # Three kinds of fuel can be examined - methane, ethane, propane
 fuel = input("Enter a type of fuel (CH4/C2H6/C3H8):")
