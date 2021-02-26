@@ -1,0 +1,2 @@
+# Simulation of combusting a fuel and air mixture
+The purpose of is the examination of spontaneous ignition, which is extremely important in order to avoid unexpected ignitions or explosions dangerous, explosive materials. Calculations were made for three types of inflammable compounds - mixtures of air and methane, ethane and propane. The purpose of examination was to scrutinize fuel's reaction to different temperatures of walls of the reactor with movable piston and to designate boundary temperature of spontaneous ignition for all these compounds.
